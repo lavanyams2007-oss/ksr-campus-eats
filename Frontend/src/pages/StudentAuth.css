@@ -1,0 +1,470 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+.student-auth-page,
+.student-auth-page * {
+  box-sizing: border-box;
+}
+
+.student-auth-page {
+  min-height: 100vh;
+  padding: 24px clamp(16px, 4vw, 56px) 40px;
+  background: #f3f6f2;
+  color: #172b22;
+  font-family: "DM Sans", sans-serif;
+}
+
+.student-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 22px;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: #52645a;
+  font: 600 14px "DM Sans", sans-serif;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.student-back-link:hover {
+  color: #146b46;
+}
+
+.student-back-link span {
+  font-size: 20px;
+}
+
+.student-auth-card {
+  display: grid;
+  grid-template-columns: 1fr 0.94fr;
+  width: min(1120px, 100%);
+  min-height: 650px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid #e5ebe5;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 24px 80px rgba(20, 55, 37, 0.09);
+}
+
+/* Left branding panel */
+
+.student-auth-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  padding: 54px clamp(28px, 4vw, 58px);
+  background: linear-gradient(145deg, #123d2c 0%, #08291e 75%);
+  color: #fff;
+}
+
+.student-brand-mark {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 36px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.09);
+  font-size: 26px;
+  backdrop-filter: blur(8px);
+}
+
+.student-eyebrow {
+  margin: 0 0 16px;
+  color: #57d99a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.8px;
+}
+
+.student-auth-hero h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font: 800 clamp(38px, 4.4vw, 57px) / 1.12 "Manrope", sans-serif;
+  letter-spacing: -2.3px;
+}
+
+.student-auth-hero h1 span {
+  color: #8ce5b0;
+}
+
+.student-hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 390px;
+  margin: 24px 0 36px;
+  color: #d1e4d8;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.student-benefits {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 18px;
+}
+
+.student-benefit {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.student-benefit > span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid rgba(150, 233, 183, 0.25);
+  border-radius: 13px;
+  color: #8ce5b0;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.student-benefit p {
+  margin: 0;
+  color: #e7f3eb;
+  font-size: 13px;
+}
+
+.student-hero-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+  padding-top: 38px;
+  color: #b8d5c4;
+  font-size: 12px;
+}
+
+.student-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #72e0a1;
+  box-shadow: 0 0 0 4px rgba(114, 224, 161, 0.12);
+}
+
+.student-decor {
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(145, 224, 173, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.student-decor-one {
+  top: -115px;
+  right: -165px;
+  width: 340px;
+  height: 340px;
+}
+
+.student-decor-two {
+  top: -175px;
+  right: -220px;
+  width: 460px;
+  height: 460px;
+}
+
+/* Right form panel */
+
+.student-auth-form-panel {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px clamp(28px, 4vw, 68px) 34px;
+  background: #fff;
+}
+
+.student-mobile-brand {
+  display: none;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 28px;
+  color: #174c34;
+  font: 800 17px "Manrope", sans-serif;
+}
+
+.student-mobile-brand span {
+  font-size: 23px;
+}
+
+.student-form-heading {
+  margin-bottom: 24px;
+}
+
+.student-form-icon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 23px;
+  place-items: center;
+  border-radius: 15px;
+  background: #eaf7ef;
+  color: #147448;
+  font-size: 23px;
+}
+
+.student-form-heading .student-eyebrow {
+  margin-bottom: 10px;
+  color: #198052;
+}
+
+.student-form-heading h2 {
+  margin: 0 0 10px;
+  color: #14251c;
+  font: 800 clamp(27px, 3vw, 36px) / 1.2 "Manrope", sans-serif;
+  letter-spacing: -1.1px;
+}
+
+.student-form-heading > p:last-child {
+  margin: 0;
+  color: #78877d;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Inputs and labels */
+
+.student-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.student-auth-form > label,
+.student-password-label label {
+  margin-top: 3px;
+  color: #34463a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.student-auth-form input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid #dfe7e0;
+  border-radius: 10px;
+  outline: none;
+  background: #fbfcfb;
+  color: #1b3024;
+  font: 500 14px "DM Sans", sans-serif;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.student-auth-form input::placeholder {
+  color: #a0aaa3;
+}
+
+.student-auth-form input:focus {
+  border-color: #278456;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(39, 132, 86, 0.1);
+}
+
+.student-password-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3px;
+}
+
+.student-password-label span {
+  color: #9aa69d;
+  font-size: 11px;
+}
+
+.student-password-field {
+  position: relative;
+}
+
+.student-password-field input {
+  padding-right: 68px;
+}
+
+.student-password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  padding: 7px;
+  border: 0;
+  background: transparent;
+  color: #648171;
+  font: 700 11px "DM Sans", sans-serif;
+  cursor: pointer;
+}
+
+.student-password-toggle:hover {
+  color: #176b45;
+}
+
+.student-optional {
+  color: #98a49b;
+  font-weight: 500;
+}
+
+/* Feedback */
+
+.student-auth-message {
+  margin: 5px 0 0;
+  padding: 11px 12px;
+  border-radius: 9px;
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.student-auth-message.is-error {
+  background: #fff1ef;
+  color: #b33d31;
+}
+
+.student-auth-message.is-success {
+  background: #eef9f1;
+  color: #217347;
+}
+
+/* Submit button */
+
+.student-submit-button {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 11px;
+  background: #176b45;
+  color: #fff;
+  font: 700 14px "DM Sans", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 7px 16px rgba(23, 107, 69, 0.13);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.student-submit-button > span:last-child {
+  font-size: 18px;
+}
+
+.student-submit-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #105737;
+}
+
+.student-submit-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+/* Switch between login and registration */
+
+.student-switch-mode {
+  margin: 23px 0 0;
+  color: #748177;
+  font-size: 12px;
+  text-align: center;
+}
+
+.student-switch-mode button {
+  margin-left: 4px;
+  padding: 3px;
+  border: 0;
+  background: transparent;
+  color: #176b45;
+  font: 800 12px "DM Sans", sans-serif;
+  cursor: pointer;
+}
+
+.student-switch-mode button:hover {
+  text-decoration: underline;
+}
+
+.student-auth-terms {
+  margin: 24px 0 0;
+  color: #a1aaa3;
+  font-size: 10px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Responsive layout */
+
+@media (max-width: 820px) {
+  .student-auth-page {
+    padding: 16px;
+  }
+
+  .student-back-link {
+    margin-bottom: 14px;
+  }
+
+  .student-auth-card {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 540px;
+    min-height: auto;
+    border-radius: 22px;
+  }
+
+  .student-auth-hero {
+    display: none;
+  }
+
+  .student-auth-form-panel {
+    padding: 30px clamp(22px, 6vw, 38px) 28px;
+  }
+
+  .student-mobile-brand {
+    display: flex;
+  }
+
+  .student-form-icon {
+    margin-bottom: 18px;
+  }
+
+  .student-form-heading h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .student-auth-page {
+    padding: 12px;
+  }
+
+  .student-auth-form-panel {
+    padding: 24px 19px;
+  }
+
+  .student-form-heading h2 {
+    font-size: 27px;
+  }
+
+  .student-auth-terms {
+    font-size: 10px;
+  }
+}
